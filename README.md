@@ -330,6 +330,7 @@ This part is a little bit trickier. The code shows as follows:
 ```
 After inspecting the code, you should figure out that the length of the string must be 6. Then you set a breakpoint at 4010b3 and find the target string to be "flyers". Up till now, there shouldn't be any difficulties.
 Then the tricy part comes. You encounter with a loop and you can't find out what it is doing easily. However, you know that the loop is doing some transitions on your input string. I try a input sequence "aaaaaa" and get the value after transitions doesn't change at all, which means that the output of a given input is unique. Then you can solve this problem by making a table(Yeah, it may seem silly, but I think it's the most convenient way). I will list some transitions here:
+
 | alpha | after transition |
 |-------|------------------|
 | a     | 97               |
@@ -339,6 +340,7 @@ Then the tricy part comes. You encounter with a loop and you can't find out what
 | e     | 101              |
 | f     | 114              |
 | g     | 115              |
+
 The ascii code of "flyers" should be "102, 108, 121, 101, 114, 115". You create a table using the method above, and then you get the answer to be "ionefg".
 
 
